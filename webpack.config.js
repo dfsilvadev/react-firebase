@@ -13,11 +13,9 @@ module.exports = {
   },
   mode: "development",
   devServer: {
-    inline: true,
-    watchOptions: {
-      poll: true,
-      aggregateTimeout: 300,
-    },
+    contentBase: "./src/",
+    open: true,
+    hot: true,
   },
   module: {
     rules: [
