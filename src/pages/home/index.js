@@ -3,9 +3,15 @@ import React, { Component } from "react";
 import "./main.css";
 
 class Home extends Component {
-  constructor() {}
+  constructor() {
+    super();
+  }
   render() {
-    return <h1>Daniel Silva</h1>;
+    return (
+      <div className="container">
+        <h1>Daniel Silva</h1>
+      </div>
+    );
   }
 }
 

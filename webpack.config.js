@@ -13,8 +13,9 @@ module.exports = {
   },
   mode: "development",
   devServer: {
-    contentBase: "./src/",
+    contentBase: "./dist/",
     open: true,
+    compress: true,
     hot: true,
   },
   module: {
