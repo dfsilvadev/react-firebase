@@ -4,7 +4,7 @@
   "description": "Curso de React usando Firebase",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --progress",
+    "build": "webpack serve --mode development --open --hot",
     "start": "webpack serve --hot"
   },
   "repository": "https://github.com/daniel-silva-dxp/react-firebase.git",
@@ -22,5 +22,24 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.13",
+    "@babel/preset-env": "^7.12.13",
+    "@babel/preset-react": "^7.12.13",
+    "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^5.0.1",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.0.0",
+    "mini-css-extract-plugin": "^1.3.5",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.21.1",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
   }
 }
