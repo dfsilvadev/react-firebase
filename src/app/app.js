@@ -1,12 +1,15 @@
-import React, { Component } from "react";
-import Home from "../pages";
+import React from "react";
+import UseStateComponent from "../components/useState-component";
+import "./App.css";
 
-export default class App extends Component {
-  render() {
-    return (
-      <div>
-        <Home />
-      </div>
-    );
-  }
-}
+const App = () => {
+  const [ativo, setAtivo] = React.useState(false);
+
+  return (
+    <React.Fragment>
+      <UseStateComponent state={ativo} setAtivo={setAtivo} />
+    </React.Fragment>
+  );
+};
+
+export default App;
