@@ -1,4 +1,5 @@
 import React from "react";
+import UseEffectComponent from "../components/useEffect-component";
 import UseStateComponent from "../components/useState-component";
 import Produto from "../components/useState-component/Produto";
 import "./App.css";
@@ -30,6 +31,8 @@ const App = () => {
       <button onClick={handleClick}>Smartphone</button>
       <button onClick={handleClick}>Tablet</button>
       <Produto dados={produtos} />
+      <br />
+      <UseEffectComponent />
     </React.Fragment>
   );
 };
