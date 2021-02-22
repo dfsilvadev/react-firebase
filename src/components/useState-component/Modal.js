@@ -6,9 +6,7 @@ const Modal = ({ setAtivo, state }) => {
     return (
       <div>
         <p>MODAL ABERTO</p>
-        <Button setAtivo={setAtivo} state={state}>
-          Fechar
-        </Button>
+        <Button setAtivo={setAtivo}>Fechar</Button>
       </div>
     );
 
