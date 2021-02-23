@@ -6,7 +6,6 @@ const UseStateComponent = ({ setAtivo, state }) => {
   return (
     <React.Fragment>
       <h1>useState - React Hooks</h1>
-      <br></br>
       {!state && (
         <Button setAtivo={setAtivo} state={state}>
           Abrir

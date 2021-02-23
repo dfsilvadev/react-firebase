@@ -20,8 +20,22 @@ const App = () => {
     setData(data);
   }
 
+  function saveToLocalStorage(data) {
+    localStorage.setItem("produtos", JSON.stringify(data));
+  }
+
+  function getToLocalStorage(data) {
+    return localStorage.getItem(data);
+  }
+
+  React.useEffect(() => {
+    setProduto(JSON.parse(getToLocalStorage("produtos")));
+  }, []);
+
   async function handleClick(e) {
-    setProduto(await getProduto(e.target.innerText));
+    const data = await getProduto(e.target.innerText);
+    setProduto(data);
+    saveToLocalStorage(data);
   }
 
   return (
