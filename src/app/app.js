@@ -1,5 +1,6 @@
 import React from "react";
 import UseEffectComponent from "../components/useEffect-component";
+import UseRefComponent from "../components/useRef-component";
 import UseStateComponent from "../components/useState-component";
 import Produto from "../components/useState-component/Produto";
 import "./App.css";
@@ -47,6 +48,7 @@ const App = () => {
       <Produto dados={produtos} />
       <br />
       <UseEffectComponent />
+      <UseRefComponent />
     </React.Fragment>
   );
 };
