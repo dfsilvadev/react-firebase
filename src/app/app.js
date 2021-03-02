@@ -42,12 +42,12 @@ const App = () => {
   return (
     <React.Fragment>
       <UseStateComponent state={ativo} setAtivo={setAtivo} />
+      <br />
+      <UseEffectComponent />
       <button onClick={handleClick}>Notebook</button>
       <button onClick={handleClick}>Smartphone</button>
       <button onClick={handleClick}>Tablet</button>
       <Produto dados={produtos} />
-      <br />
-      <UseEffectComponent />
       <UseRefComponent />
     </React.Fragment>
   );
