@@ -1,5 +1,6 @@
 import React from "react";
 import UseEffectComponent from "../components/useEffect-component";
+import UseContextComponent from "../components/userContext";
 import UseRefComponent from "../components/useRef-component";
 import UseStateComponent from "../components/useState-component";
 import Produto from "../components/useState-component/Produto";
@@ -49,6 +50,7 @@ const App = () => {
       <button onClick={handleClick}>Tablet</button>
       <Produto dados={produtos} />
       <UseRefComponent />
+      <UseContextComponent />
     </React.Fragment>
   );
 };
