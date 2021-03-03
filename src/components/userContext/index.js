@@ -13,18 +13,19 @@ const sum = () => {
 const UseContextComponent = () => {
   const [val, setVal] = React.useState(0);
 
-  console.time();
   const a = React.useMemo(() => sum(), []);
-  console.timeEnd();
 
   return (
-    <ContextComponent>
-      <h1>useContext - React Hooks</h1>
+    <>
+      <h1>useMemo - React hooks</h1>
       <button onClick={() => setVal(val + 1)}>
         {val} - {a}
       </button>
-      <Produto />
-    </ContextComponent>
+      <ContextComponent>
+        <h1>useContext - React Hooks</h1>
+        <Produto />
+      </ContextComponent>
+    </>
   );
 };
 

@@ -3,18 +3,21 @@ import React from "react";
 export const GlobalContext = React.createContext();
 
 export const ContextComponent = ({ children }) => {
-  const user = {
-    nome: "Daniel",
-    sobrenome: "Silva",
-    idade: 33,
-    endereco: {
-      logradouro: "R R A D L",
-      numero: 100,
-      cidade: "São Paulo",
-      uf: "SP",
-    },
+  const [produtos, setProdutos] = React.useState(null);
+
+  React.useEffect(() => {
+    fetch("https://ranekapi.origamid.dev/json/api/produto/")
+      .then((produtos) => produtos.json())
+      .then((produtos) => setProdutos(produtos));
+  }, []);
+
+  const cleanProducts = () => {
+    setProdutos(null);
   };
+
   return (
-    <GlobalContext.Provider value={user}>{children}</GlobalContext.Provider>
+    <GlobalContext.Provider value={{ produtos, cleanProducts }}>
+      {children}
+    </GlobalContext.Provider>
   );
 };

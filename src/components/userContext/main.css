@@ -1,0 +1,10 @@
+.thumb {
+  background-color: #fff;
+  width: 450px;
+  height: table;
+  margin: 20px auto;
+  padding: 10px;
+}
+.thumb img {
+  width: 100%;
+}
