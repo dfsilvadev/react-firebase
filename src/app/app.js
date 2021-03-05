@@ -1,56 +1,109 @@
 import React from "react";
-import UseEffectComponent from "../components/useEffect-component";
-import UseContextComponent from "../components/userContext";
-import UseRefComponent from "../components/useRef-component";
-import UseStateComponent from "../components/useState-component";
-import Produto from "../components/useState-component/Produto";
+import Input from "../components/input";
 import "./App.css";
 
+const fields = [
+  {
+    id: "name",
+    name: "name",
+    type: "text",
+  },
+  {
+    id: "email",
+    name: "email",
+    type: "email",
+  },
+  {
+    id: "password",
+    name: "password",
+    type: "password",
+  },
+  {
+    id: "zipCode",
+    name: "zipCode",
+    type: "text",
+  },
+  {
+    id: "street",
+    name: "street",
+    type: "text",
+  },
+  {
+    id: "number",
+    name: "number",
+    type: "text",
+  },
+  {
+    id: "district",
+    name: "district",
+    type: "text",
+  },
+  {
+    id: "city",
+    name: "city",
+    type: "text",
+  },
+  {
+    id: "state",
+    name: "state",
+    type: "text",
+  },
+];
+
 const App = () => {
-  const [ativo, setAtivo] = React.useState(false);
-  const [produtos, setData] = React.useState(null);
+  const [form, setForm] = React.useState({
+    name: "",
+    email: "",
+    password: "",
+    zipCode: "",
+    street: "",
+    number: "",
+    district: "",
+    city: "",
+    state: "",
+  });
 
-  function getApiUrl(produto) {
-    return `https://ranekapi.origamid.dev/json/api/produto/${produto.toLowerCase()}`;
-  }
+  const [response, setResponse] = React.useState(null);
 
-  function getProduto(innerText) {
-    return fetch(getApiUrl(innerText)).then((data) => data.json());
-  }
+  const handleChange = ({ target }) => {
+    setForm({ ...form, [target.name]: target.value });
+  };
 
-  function setProduto(data) {
-    setData(data);
-  }
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const headers = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(form),
+    };
+    fetch("https://ranekapi.origamid.dev/json/api/usuario", headers).then(
+      (response) => {
+        setResponse(response);
+      }
+    );
+  };
 
-  function saveToLocalStorage(data) {
-    localStorage.setItem("produtos", JSON.stringify(data));
-  }
-
-  function getToLocalStorage(data) {
-    return localStorage.getItem(data);
-  }
-
-  React.useEffect(() => {
-    setProduto(JSON.parse(getToLocalStorage("produtos")));
-  }, []);
-
-  async function handleClick(e) {
-    const data = await getProduto(e.target.innerText);
-    setProduto(data);
-    saveToLocalStorage(data);
-  }
-
+  console.log(response);
   return (
     <React.Fragment>
-      <UseStateComponent state={ativo} setAtivo={setAtivo} />
-      <br />
-      <UseEffectComponent />
-      <button onClick={handleClick}>Notebook</button>
-      <button onClick={handleClick}>Smartphone</button>
-      <button onClick={handleClick}>Tablet</button>
-      <Produto dados={produtos} />
-      <UseRefComponent />
-      <UseContextComponent />
+      <h1>Trabalhando com inputs</h1>
+      <form onSubmit={handleSubmit} method="GET">
+        {fields.map(({ id, name, type }) => {
+          return (
+            <Input
+              key={id}
+              type={type}
+              name={name}
+              value={form[name]}
+              placeholder={`Enter with your ${name}`}
+              handleChange={handleChange}
+            />
+          );
+        })}
+        <button className="btn btn-medium btn-dark">Register</button>
+      </form>
     </React.Fragment>
   );
 };
