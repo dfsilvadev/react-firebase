@@ -1,5 +1,6 @@
 import React from "react";
 import Input from "../components/input";
+import Radio from "../components/radio";
 import "./App.css";
 
 const fields = [
@@ -64,9 +65,14 @@ const App = () => {
   });
 
   const [response, setResponse] = React.useState(null);
+  const [radio, setRadio] = React.useState("");
 
   const handleChange = ({ target }) => {
     setForm({ ...form, [target.name]: target.value });
+  };
+
+  const handleChangeRaio = ({ target }) => {
+    setRadio(target.value);
   };
 
   const handleSubmit = (e) => {
@@ -85,7 +91,6 @@ const App = () => {
     );
   };
 
-  console.log(response);
   return (
     <React.Fragment>
       <h1>Trabalhando com inputs</h1>
@@ -102,6 +107,15 @@ const App = () => {
             />
           );
         })}
+        <label>
+          <Radio name="questionario" value="sim" onChange={handleChangeRaio} />
+          SIM
+        </label>
+        <label>
+          <Radio name="questionario" value="não" onChange={handleChangeRaio} />
+          NÃO
+        </label>
+        {radio}
         <button className="btn btn-medium btn-dark">Register</button>
       </form>
     </React.Fragment>
