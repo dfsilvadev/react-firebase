@@ -1,0 +1,23 @@
+textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 10px;
+  border: 0;
+  background-color: #3d3c3a;
+  font-family: "Roboto Mono", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  color: #aba8a2;
+}
+::-webkit-input-placeholder {
+  color: #aba8a2;
+}
+:-moz-placeholder {
+  color: #aba8a2;
+}
+::-moz-placeholder {
+  color: #aba8a2;
+}
+:-ms-input-placeholder {
+  color: #aba8a2;
+}
