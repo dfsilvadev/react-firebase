@@ -2,7 +2,7 @@
   "name": "react-firebase",
   "version": "1.0.0",
   "description": "Curso de React usando Firebase",
-  "main": "index.js",
+  "main": "index.jsx",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
