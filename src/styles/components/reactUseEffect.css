@@ -49,3 +49,33 @@ button.btn-dark:hover {
   background: #fff;
   border-radius: 3px;
 }
+form {
+  margin-top: 0.935rem;
+}
+form .input-group {
+  display: flex;
+}
+.input-group input[type="search"] {
+  outline: 0;
+  height: 35px;
+  flex: 1;
+  padding: 0px 15px;
+  border-radius: 3px 0 0 3px;
+  border: 1px solid #dde4e6;
+  background: #fff;
+  font-size: 12px;
+  line-height: 12px;
+}
+form .input-group button {
+  width: 34px;
+  height: 34px;
+  background-color: tomato;
+  color: #fff;
+  border-radius: 0 3px 3px 0;
+}
+.error {
+  font-size: 12px;
+  font-weight: 600;
+  color: tomato;
+  margin-top: 0.3rem;
+}
