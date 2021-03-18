@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter } from "react-router-dom";
 
-import Header from "./components/Sidebar";
+import Sidebar from "./components/Sidebar";
 import MyRoutes from "./Routes";
 
 import "./styles/global.scss";
@@ -9,7 +9,7 @@ import "./styles/global.scss";
 const App = () => {
   return (
     <>
-      <Header />
+      <Sidebar />
       <BrowserRouter>
         <div className="container">
           <MyRoutes />

@@ -1,7 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   TiUserOutline,
   TiFolderOpen,
+  TiStarOutline,
   TiArrowBackOutline,
 } from "react-icons/ti";
 
@@ -18,6 +20,9 @@ const Sidebar = () => {
           </li>
           <li className="link">
             <TiFolderOpen />
+          </li>
+          <li className="link">
+            <TiStarOutline />
           </li>
           <li className="link">
             <TiArrowBackOutline />
