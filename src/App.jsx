@@ -1,15 +1,20 @@
 import React from "react";
+import { BrowserRouter } from "react-router-dom";
+
 import Header from "./components/Sidebar";
-import Home from "./pages/Home";
+import MyRoutes from "./Routes";
+
 import "./styles/global.scss";
 
 const App = () => {
   return (
     <>
       <Header />
-      <div className="container">
-        <Home />
-      </div>
+      <BrowserRouter>
+        <div className="container">
+          <MyRoutes />
+        </div>
+      </BrowserRouter>
     </>
   );
 };
