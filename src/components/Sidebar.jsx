@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import {
   TiUserOutline,
   TiFolderOpen,
@@ -15,15 +15,21 @@ const Sidebar = () => {
       <div className="logo">git.app</div>
       <nav>
         <ul>
-          <li className="link">
-            <TiUserOutline />
-          </li>
-          <li className="link">
-            <TiFolderOpen />
-          </li>
-          <li className="link">
-            <TiStarOutline />
-          </li>
+          <NavLink to="/" end>
+            <li className="link active">
+              <TiUserOutline />
+            </li>
+          </NavLink>
+          <NavLink to="repos">
+            <li className="link">
+              <TiFolderOpen />
+            </li>
+          </NavLink>
+          <NavLink to="starred">
+            <li className="link">
+              <TiStarOutline />
+            </li>
+          </NavLink>
           <li className="link">
             <TiArrowBackOutline />
           </li>
