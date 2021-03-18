@@ -1,13 +1,16 @@
 import React from "react";
-import ReactUseEffect from "./components/ReactUseEffect";
+import Header from "./components/Header";
+import Home from "./pages/Home";
 import "./styles/global.css";
 
 const App = () => {
   return (
-    <main className="main display-flex align-items-center justify-content-center flex-direction-column">
-      <h1>useEffect</h1>
-      <ReactUseEffect />
-    </main>
+    <>
+      <Header />
+      <div className="container">
+        <Home />
+      </div>
+    </>
   );
 };
 

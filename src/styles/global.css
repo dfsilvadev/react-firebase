@@ -1,5 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300;400;600&family=Roboto:wght@300;400;500;600;700&display=swap");
 
+:root {
+  --white: #fff;
+  --background: #f2f3f5;
+  --gray-line: #dcdde0;
+  --text: #666666;
+  --text-highlight: #b3b9ff;
+  --title: #2e384d;
+  --red: #e83f5b;
+  --green: #4cd62b;
+  --blue: #5965e0;
+  --blue-dark: #4953b8;
+  --blue-twitter: #2aa9e0;
+}
+
 /* RESET */
 * {
   margin: 0;
@@ -13,11 +27,11 @@
 }
 html,
 body {
-  color: #33302b;
-  background-color: #e5e5e5;
+  color: var(--text);
+  background-color: var(--background);
 }
 body {
-  font-family: "Roboto", sans-serif;
+  font: 400 1rem "Roboto", sans-serif;
   overflow-x: hidden;
 }
 ol,
@@ -31,6 +45,7 @@ h4,
 h5,
 h6 {
   font-weight: inherit;
+  color: var(--title);
 }
 span {
   display: inline-block;
@@ -41,23 +56,25 @@ a {
 }
 a,
 p {
-  font-family: "Roboto Mono", sans-serif;
-  font-size: 14px;
+  font: 400 0.875rem "Roboto Mono", sans-serif;
 }
+
 /* CLASSES GERAIS */
 .container {
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 0 auto;
+  padding: 0 15px;
 }
+
 @media (min-width: 576px) {
   .container {
     max-width: 540px;
   }
 }
 @media (min-width: 768px) {
+  html {
+    font-size: 87.5%;
+  }
   .container {
     max-width: 720px;
   }
@@ -68,53 +85,16 @@ p {
   }
 }
 @media (min-width: 1200px) {
+  html {
+    font-size: 93.75%;
+  }
   .container {
     max-width: 1140px;
   }
 }
 @media (min-width: 1920px) {
 }
-.display-flex {
-  display: flex;
-}
-.align-items-center {
-  align-items: center;
-}
-.justify-content-center {
-  justify-content: center;
-}
-.flex-direction-row {
-  flex-direction: row;
-}
-.flex-direction-column {
-  flex-direction: column;
-}
-.main {
-  width: 100%;
-  height: 100vh;
-}
-.main h1 {
-  font-weight: 500;
-  margin-bottom: 5px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
-.content-form {
-  background-color: #fff;
-  max-width: 350px;
-  padding: 10px;
-  border-radius: 3px;
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
-}
-.content-form label {
-  display: inline-block;
-  width: 50%;
-  margin-bottom: 10px;
-  font-size: 14px;
-  font-weight: 600;
-  font-family: "Roboto Mono", sans-serif;
-}
 
-/* SCROLLBAR */
 ::-webkit-scrollbar {
   width: 7px !important;
 }
