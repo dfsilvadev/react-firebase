@@ -1,9 +1,8 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import {
+  TiHomeOutline,
   TiUserOutline,
-  TiFolderOpen,
-  TiStarOutline,
   TiArrowBackOutline,
 } from "react-icons/ti";
 
@@ -16,18 +15,13 @@ const Sidebar = () => {
       <nav>
         <ul>
           <NavLink to="/" end>
+            <li>
+              <TiHomeOutline />
+            </li>
+          </NavLink>
+          <NavLink to="/profile">
             <li className="link active">
               <TiUserOutline />
-            </li>
-          </NavLink>
-          <NavLink to="repos">
-            <li className="link">
-              <TiFolderOpen />
-            </li>
-          </NavLink>
-          <NavLink to="starred">
-            <li className="link">
-              <TiStarOutline />
             </li>
           </NavLink>
           <li className="link">
