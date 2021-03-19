@@ -6,7 +6,7 @@ import Starred from "./Starred";
 const Home = () => {
   return (
     <div className="container">
-      <h1>Home</h1>
+      <h1>Profile</h1>
       <Link to="repos">Repos</Link>
       <Link to="starred">Starreds</Link>
 
