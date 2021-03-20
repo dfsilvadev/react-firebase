@@ -1,0 +1,55 @@
+.profile-content {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 2rem;
+  background: var(--white);
+  border-radius: 5px;
+
+  .wrap {
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 5.5rem;
+      height: 5.5rem;
+      border-radius: 50%;
+    }
+    .profile-user {
+      margin-left: 1.5rem;
+
+      strong {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: var(--title);
+      }
+      a {
+        transition: color 0.2s ease;
+        &:hover {
+          color: var(--blue);
+          font-weight: 600;
+        }
+      }
+      a p {
+        font-size: 0.875rem;
+        margin-bottom: 0.5rem;
+      }
+      nav ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        li {
+          display: flex;
+          justify-content: space-between;
+          a span {
+            margin-left: 0.2rem;
+          }
+        }
+      }
+    }
+  }
+  & > p {
+    margin-top: 1.25rem;
+    text-align: justify;
+    padding: 0.625rem 0;
+  }
+}
