@@ -14,18 +14,20 @@ const Sidebar = () => {
       <div className="logo">git.app</div>
       <nav>
         <ul>
-          <NavLink to="/" end>
-            <li>
-              <TiHomeOutline />
-            </li>
-          </NavLink>
-          <NavLink to="/profile">
-            <li className="link active">
-              <TiUserOutline />
-            </li>
-          </NavLink>
           <li className="link">
-            <TiArrowBackOutline />
+            <NavLink to="/" end>
+              <TiHomeOutline /> <span>Home</span>
+            </NavLink>
+          </li>
+          <li className="link">
+            <NavLink to="/profile">
+              <TiUserOutline /> <span> Profile</span>
+            </NavLink>
+          </li>
+          <li className="link">
+            <NavLink to="/login">
+              <TiArrowBackOutline /> <span>Logout</span>
+            </NavLink>
           </li>
         </ul>
       </nav>
