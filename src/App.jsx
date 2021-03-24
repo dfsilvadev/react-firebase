@@ -1,14 +1,10 @@
-import React from "react";
-
-import Sidebar from "./components/Sidebar";
+import Navbar from "./components/Navbar";
 import MyRoutes from "./Routes";
-
-import "./styles/global.scss";
 
 const App = () => {
   return (
     <>
-      <Sidebar />
+      <Navbar />
       <MyRoutes />
     </>
   );

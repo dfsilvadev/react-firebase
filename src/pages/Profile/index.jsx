@@ -1,7 +1,3 @@
-import React from "react";
-
-import "../styles/pages/Profile.scss";
-
 const Home = () => {
   return (
     <section className="container">

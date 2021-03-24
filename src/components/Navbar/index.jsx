@@ -1,4 +1,3 @@
-import React from "react";
 import { NavLink } from "react-router-dom";
 import {
   TiHomeOutline,
@@ -6,11 +5,9 @@ import {
   TiArrowBackOutline,
 } from "react-icons/ti";
 
-import "../styles/components/Sidebar.scss";
-
-const Sidebar = () => {
+const Navbar = () => {
   return (
-    <aside>
+    <div className="header">
       <div className="logo">git.app</div>
       <nav>
         <ul>
@@ -31,8 +28,8 @@ const Sidebar = () => {
           </li>
         </ul>
       </nav>
-    </aside>
+    </div>
   );
 };
 
-export default Sidebar;
+export default Navbar;

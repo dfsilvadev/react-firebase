@@ -4,9 +4,6 @@
   "description": "Curso de React usando Firebase",
   "main": "index.jsx",
   "dependencies": {
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
     "history": "^5.0.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -14,6 +11,7 @@
     "react-router": "^6.0.0-beta.0",
     "react-router-dom": "^6.0.0-beta.0",
     "react-scripts": "4.0.2",
+    "styled-components": "^5.2.1",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
@@ -41,6 +39,8 @@
     ]
   },
   "devDependencies": {
-    "node-sass": "^5.0.0"
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10"
   }
 }

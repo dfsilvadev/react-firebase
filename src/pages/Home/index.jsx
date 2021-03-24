@@ -1,11 +1,9 @@
-import React from "react";
-
-import "../styles/pages/Home.scss";
+import HeaderHome from "../../components/HeaderHome";
 
 const Home = () => {
   return (
     <section className="container">
-      <h1>Home</h1>
+      <HeaderHome />
     </section>
   );
 };
