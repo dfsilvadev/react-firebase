@@ -1,20 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300;400;600&family=Rajdhani:wght@600&family=Poppins:wght@300;400;600&display=swap");
 
-:root {
-  --white: #fff;
-  --background: #f2f3f5;
-  --gray-line: #dcdde0;
-  --text: #666666;
-  --text-highlight: #b3b9ff;
-  --title: #2e384d;
-  --red: #e83f5b;
-  --green: #4cd62b;
-  --blue: #5965e0;
-  --blue-dark: #4953b8;
-  --blue-twitter: #2aa9e0;
-  --pink: #ea4c89;
-}
-
 /* RESET */
 * {
   margin: 0;
@@ -26,39 +11,10 @@
   text-rendering: optimizeLegibility;
   vertical-align: baseline;
 }
-html,
-body {
-  color: var(--text);
-  background-color: var(--background);
-}
+
 body {
   font: 400 1rem "Poppins", sans-serif;
   overflow-x: hidden;
-}
-ol,
-ul {
-  list-style: none;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Poppins", sans-serif;
-  font-weight: inherit;
-  color: var(--title);
-}
-span {
-  display: inline-block;
-}
-a {
-  text-decoration: none;
-  color: inherit;
-}
-a,
-p {
-  font: 400 0.875rem "Roboto Mono", sans-serif;
 }
 
 /* CLASSES GERAIS */
@@ -99,17 +55,4 @@ p {
   }
 }
 @media (min-width: 1920px) {
-}
-
-::-webkit-scrollbar {
-  width: 7px !important;
-}
-::-webkit-scrollbar-track {
-  background: #232323 !important;
-}
-::-webkit-scrollbar-thumb {
-  background: #232323 !important;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #28f5be !important;
 }
