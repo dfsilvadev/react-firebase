@@ -7,14 +7,6 @@ export const Header = styled.header`
   padding: 0.875rem;
   border-radius: 3px;
   box-shadow: 0 0 60px rgba(0, 0, 0, 0.05);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  .title,
-  .wrap-image {
-    width: 45%;
-  }
 
   .title {
     h1 {
@@ -29,15 +21,22 @@ export const Header = styled.header`
     }
   }
 
-  @media (max-width: 767px) {
+  @media (min-width: 375px) {
     display: grid;
     grid-template-rows: repeat(2, 1fr);
-    gap: 1.5rem;
     height: auto;
     .title,
     .wrap-image {
-      width: 60%;
-      margin: 0 auto;
+      width: 100%;
+    }
+  }
+  @media (min-width: 576px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .title,
+    .wrap-image {
+      width: 45%;
     }
   }
 `;
