@@ -1,9 +1,12 @@
 import HeaderHome from "../../components/HeaderHome";
+import { Content } from "./styles";
 
 const Home = () => {
   return (
     <section className="container">
-      <HeaderHome />
+      <Content>
+        <HeaderHome />
+      </Content>
     </section>
   );
 };
