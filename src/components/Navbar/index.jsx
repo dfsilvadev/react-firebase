@@ -5,30 +5,35 @@ import {
   TiArrowBackOutline,
 } from "react-icons/ti";
 
+import githubImg from "../../assets/github.png";
+import { Nav } from "./styles";
+
 const Navbar = () => {
   return (
-    <div className="header">
-      <div className="logo">git.app</div>
+    <Nav className="header">
+      <div className="logo">
+        <img src={githubImg} alt="Github Icon" />
+      </div>
       <nav>
         <ul>
           <li className="link">
             <NavLink to="/" end>
-              <TiHomeOutline /> <span>Home</span>
+              <TiHomeOutline />
             </NavLink>
           </li>
           <li className="link">
             <NavLink to="/profile">
-              <TiUserOutline /> <span> Profile</span>
+              <TiUserOutline />
             </NavLink>
           </li>
           <li className="link">
             <NavLink to="/login">
-              <TiArrowBackOutline /> <span>Logout</span>
+              <TiArrowBackOutline />
             </NavLink>
           </li>
         </ul>
       </nav>
-    </div>
+    </Nav>
   );
 };
 
