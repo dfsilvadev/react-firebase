@@ -1,3 +1,5 @@
+import headerDevImg from "../../assets/dev.svg";
+
 const HeaderHome = () => {
   return (
     <header>
@@ -10,7 +12,7 @@ const HeaderHome = () => {
         </p>
       </div>
       <div className="wrap-image">
-        <img src="dev.svg" alt="Developer" />
+        <img src={headerDevImg} alt="Developer" />
       </div>
     </header>
   );
