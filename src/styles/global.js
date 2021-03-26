@@ -34,16 +34,16 @@ export const GlobalStyle = createGlobalStyle`
     }
   }
   body {
+    font-family: "Poppins", sans-serif;
     color: var(--text);
     background-color: var(--background);
     overflow-x: hidden;
   }
-  body, 
   input, 
   textarea, 
   button {
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 300;
   }
   ol,
   ul {
@@ -55,8 +55,8 @@ export const GlobalStyle = createGlobalStyle`
   h4,
   h5,
   h6 {
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: inherit;
     color: var(--title);
   }
   span {
@@ -68,7 +68,7 @@ export const GlobalStyle = createGlobalStyle`
   }
   a,
   p {
-    font: 400 0.875rem "Roboto Mono", sans-serif;
+    font: 300 0.875rem "Poppins", sans-serif;
   }
   button { 
     cursor: pointer;
