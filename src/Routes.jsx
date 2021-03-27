@@ -1,14 +1,13 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Profile from "./pages/Profile";
-import Home from "./pages/Home";
-// import Starred from "./pages/Starred";
+import { Today } from "./pages/Today";
+import { Week } from "./pages/Week";
 
 const MyRoutes = () => {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="profile/*" element={<Profile />} />
+      <Route path="/" element={<Today />} />
+      <Route path="week" element={<Week />} />
     </Routes>
   );
 };
