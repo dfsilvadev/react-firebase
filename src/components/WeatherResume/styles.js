@@ -16,7 +16,7 @@ export const WatherResumeContent = styled.aside`
       flex: 1;
       border: 1px solid var(--gray-line);
       border-radius: 0.5rem 0 0 0.5rem;
-      padding: 1rem;
+      padding: 13px 15px;
       font-size: 1rem;
       &::placeholder {
         color: var(--text-highlight);
@@ -37,7 +37,6 @@ export const WatherResumeContent = styled.aside`
       justify-content: center;
     }
   }
-
   .data-temp {
     display: flex;
     align-items: center;
@@ -80,6 +79,52 @@ export const WatherResumeContent = styled.aside`
     h1 {
       text-align: center;
       font-size: 4.5625rem;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .data-temp {
+      justify-content: flex-end;
+      img {
+        margin-left: 0.875rem;
+      }
+      .temperature {
+        strong {
+          font-size: 7.5rem;
+        }
+        p {
+          font-size: 1.75rem;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 1200px) {
+    max-width: 460px;
+    height: 100vh;
+    margin-top: 0;
+    border-radius: 0;
+
+    .data-temp {
+      flex-direction: column;
+      img {
+        width: 200px;
+      }
+      .temperature {
+        strong {
+          font-size: 7.5rem;
+        }
+        p {
+          font-size: 1.75rem;
+        }
+      }
+    }
+    .data-city {
+      display: flex;
+      flex-direction: column;
+      .currently {
+        padding: 2rem 0;
+      }
     }
   }
 `;
