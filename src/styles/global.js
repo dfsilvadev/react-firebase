@@ -96,6 +96,9 @@ export const GlobalStyle = createGlobalStyle`
     margin-left: auto;
     display: flex;
     flex-direction: column;
+    > div {
+      width: 100%;
+    }
   }
   /* @media (min-width: 576px) {
     .container {
@@ -114,8 +117,11 @@ export const GlobalStyle = createGlobalStyle`
   }*/
   @media (min-width: 1200px) {
     .container {
-      padding-left: 0;
+      padding: 0;
       flex-direction: row;
+      > div {
+        flex: 1
+      }
     }
   }
 
