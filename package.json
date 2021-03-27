@@ -4,6 +4,7 @@
   "description": "Curso de React usando Firebase",
   "main": "index.jsx",
   "dependencies": {
+    "axios": "^0.21.1",
     "history": "^5.0.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
