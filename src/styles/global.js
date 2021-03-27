@@ -12,6 +12,21 @@ export const GlobalStyle = createGlobalStyle`
     --green: #33cc95;
     --blue: #5965e0;
     --yellow: #f0bc5e;
+
+    --ft-14: 0.875rem;
+    --ft-16: 1rem;
+    --ft-18: 1.125rem;
+    --ft-24: 1.5rem;
+    --ft-28: 1.75rem;
+    --ft-64: 4rem;
+    --ft-73: 4.5625rem;
+    --ft-120: 7.5rem;
+
+    --px-10: 0.625rem;
+    --px-16: 1rem;
+    --px-20: 1.25rem;
+    --px-40: 2.5rem;
+    --px-60: 3.75rem;
   }
   * {
     margin: 0;
