@@ -32,7 +32,7 @@ export const GlobalStyle = createGlobalStyle`
     }
   }
   body {
-    font-family: "Poppins", sans-serif;
+    font-family: "Barlow Condensed", sans-serif;
     color: var(--text);
     background-color: var(--background);
     overflow-x: hidden;
@@ -53,7 +53,6 @@ export const GlobalStyle = createGlobalStyle`
   h4,
   h5,
   h6 {
-    font-family: "Barlow Condensed", sans-serif;
     font-weight: inherit;
     color: var(--title);
   }
@@ -63,10 +62,6 @@ export const GlobalStyle = createGlobalStyle`
   a {
     text-decoration: none;
     color: inherit;
-  }
-  a,
-  p {
-    font: 300 0.875rem "Poppins", sans-serif;
   }
   button { 
     cursor: pointer;
@@ -85,7 +80,7 @@ export const GlobalStyle = createGlobalStyle`
     margin-right: auto;
     margin-left: auto;
   }
-  @media (min-width: 576px) {
+  /* @media (min-width: 576px) {
     .container {
       max-width: 540px;
     }
@@ -104,7 +99,7 @@ export const GlobalStyle = createGlobalStyle`
     .container {
       max-width: 1140px;
     }
-  }
+  } */
 
   ::-webkit-scrollbar {
     width: 7px !important;
