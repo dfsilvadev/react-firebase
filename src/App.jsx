@@ -1,12 +1,14 @@
+import { WeatherResume } from "./components/WeatherResume";
+import MyRoutes from "./Routes";
 import { GlobalStyle } from "./styles/global";
 
 const App = () => {
   return (
-    <>
-      <h1>App</h1>
-      <p>Lorem ipsum dolor sit amet, consect</p>
+    <div className="container">
+      <WeatherResume />
+      <MyRoutes />
       <GlobalStyle />
-    </>
+    </div>
   );
 };
 
