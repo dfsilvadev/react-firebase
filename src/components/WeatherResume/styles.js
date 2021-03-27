@@ -2,35 +2,39 @@ import styled from "styled-components";
 
 export const WatherResumeContent = styled.aside`
   width: 100%;
-  height: auto;
+  height: 60vh;
   margin-top: 1rem;
   padding: 1rem 1.25rem;
   background: var(--white);
   border-radius: 1.25rem;
 
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 60px 2fr 1fr;
+  gap: 1.25rem;
+
   .search {
     display: flex;
-    margin-bottom: 1.25rem;
-
+    align-items: center;
+    justify-content: center;
     input {
       flex: 1;
-      border: 1px solid var(--gray-line);
+      background: var(--background);
+      border: none;
       border-radius: 0.5rem 0 0 0.5rem;
-      padding: 13px 15px;
-      font-size: 1rem;
+      padding: 14px 15px;
+      font-size: var(--ft-16);
       &::placeholder {
         color: var(--text-highlight);
         font-weight: 600;
       }
     }
     > span {
-      width: 48px;
-      height: 48px;
-      border-top: 1px solid var(--gray-line);
-      border-right: 1px solid var(--gray-line);
-      border-bottom: 1px solid var(--gray-line);
+      width: 45px;
+      height: 45px;
+      background: var(--background);
       border-radius: 0 0.5rem 0.5rem 0;
-      font-size: 1.5rem;
+      font-size: vat(--ft-24);
       color: var(--text-highlight);
       display: flex;
       align-items: center;
@@ -39,62 +43,66 @@ export const WatherResumeContent = styled.aside`
   }
   .data-temp {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
     flex-direction: row-reverse;
-    padding: 1.25rem 0;
-    border-bottom: 1px solid var(--gray-line);
+    align-items: center;
+    justify-content: flex-end;
 
+    border-bottom: 1px solid var(--gray-line);
     img {
       width: 150px;
     }
     .temperature {
+      padding: var(--px-16);
       strong {
-        font: 600 3.75rem "Rajdhani", sans-serif;
+        font: 600 var(--ft-73) / var(--ft-73) "Rajdhani", sans-serif;
       }
       p {
-        font: 500 1.125rem "Barlow Condensed", sans-serif;
+        font-size: var(--ft-18);
         span {
           color: var(--text-highlight);
         }
       }
     }
   }
-  .data-city {
-    padding: 1.25rem 0;
+  .data-info-city {
     .currently {
-      ul li {
+      li {
         display: flex;
         align-items: center;
         img {
           width: 30px;
         }
         span {
-          margin-left: 0.875rem;
-          font-size: 1.125rem;
-          font-weight: 500;
+          margin-left: var(--px-10);
         }
       }
     }
     h1 {
+      font-size: var(--ft-64);
       text-align: center;
-      font-size: 4.5625rem;
     }
   }
 
   @media (min-width: 768px) {
     .data-temp {
-      justify-content: flex-end;
-      img {
-        margin-left: 0.875rem;
+      justify-content: center;
+    }
+    .data-info-city {
+      .currently {
+        padding: var(--px-10) 0;
+        li {
+          display: flex;
+          align-items: center;
+          img {
+            width: 40px;
+          }
+          span {
+            font-size: var(--ft-18);
+          }
+        }
       }
-      .temperature {
-        strong {
-          font-size: 7.5rem;
-        }
-        p {
-          font-size: 1.75rem;
-        }
+      h1 {
+        font-size: var(--ft-73);
       }
     }
   }
@@ -104,26 +112,16 @@ export const WatherResumeContent = styled.aside`
     height: 100vh;
     margin-top: 0;
     border-radius: 0;
-
     .data-temp {
       flex-direction: column;
       img {
-        width: 200px;
+        width: 250px;
       }
       .temperature {
+        padding: var(--px-16);
         strong {
-          font-size: 7.5rem;
+          font-size: var(--ft-120);
         }
-        p {
-          font-size: 1.75rem;
-        }
-      }
-    }
-    .data-city {
-      display: flex;
-      flex-direction: column;
-      .currently {
-        padding: 2rem 0;
       }
     }
   }
