@@ -79,6 +79,8 @@ export const GlobalStyle = createGlobalStyle`
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
+    display: flex;
+    flex-direction: column;
   }
   /* @media (min-width: 576px) {
     .container {
@@ -94,12 +96,13 @@ export const GlobalStyle = createGlobalStyle`
     .container {
       max-width: 960px;
     }
-  }
+  }*/
   @media (min-width: 1200px) {
     .container {
-      max-width: 1140px;
+      padding-left: 0;
+      flex-direction: row;
     }
-  } */
+  }
 
   ::-webkit-scrollbar {
     width: 7px !important;
