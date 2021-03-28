@@ -93,12 +93,11 @@ export const WatherResumeContent = styled.aside`
       left: 0;
       right: 0;
       bottom: 0;
-      background: rgba(0, 0, 0, 0.5);
+      background: rgba(240, 188, 94, 0.5);
       z-index: 1;
     }
     h1 {
       font-size: var(--ft-64);
-      color: var(--white);
       z-index: 2;
     }
   }
