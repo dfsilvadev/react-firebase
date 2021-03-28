@@ -132,6 +132,7 @@ export const WatherResumeContent = styled.aside`
     height: 100vh;
     margin-top: 0;
     border-radius: 0;
+    grid-template-rows: 60px 2fr 1fr 150px;
     .data-temp {
       flex-direction: column;
       .temperature {

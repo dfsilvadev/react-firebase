@@ -1,6 +1,6 @@
 import { FaSistrix } from "react-icons/fa";
 import ClearDay from "../../assets/icons/clear_day.svg";
-import bgCity from "../../assets/city_at_night.jpeg";
+import bgCity from "../../assets/city.jpeg";
 import { WatherResumeContent } from "./styles";
 
 export function WeatherResume() {
