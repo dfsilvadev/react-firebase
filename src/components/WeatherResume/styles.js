@@ -10,8 +10,8 @@ export const WatherResumeContent = styled.aside`
 
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 60px 2fr 1fr;
-  gap: 1.25rem;
+  grid-template-rows: 60px 2fr 1fr 1fr;
+  gap: var(--px-10);
 
   .search {
     display: flex;
@@ -64,7 +64,7 @@ export const WatherResumeContent = styled.aside`
       }
     }
   }
-  .data-info-city {
+  .data-info {
     .currently {
       li {
         display: flex;
@@ -77,9 +77,29 @@ export const WatherResumeContent = styled.aside`
         }
       }
     }
+  }
+
+  .city {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    overflow: hidden;
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
     h1 {
       font-size: var(--ft-64);
-      text-align: center;
+      color: var(--white);
+      z-index: 2;
     }
   }
 
@@ -87,7 +107,7 @@ export const WatherResumeContent = styled.aside`
     .data-temp {
       justify-content: center;
     }
-    .data-info-city {
+    .data-info {
       .currently {
         padding: var(--px-10) 0;
         li {
@@ -108,15 +128,12 @@ export const WatherResumeContent = styled.aside`
   }
 
   @media (min-width: 1200px) {
-    max-width: 460px;
+    max-width: 400px;
     height: 100vh;
     margin-top: 0;
     border-radius: 0;
     .data-temp {
       flex-direction: column;
-      img {
-        width: 250px;
-      }
       .temperature {
         padding: var(--px-16);
         strong {

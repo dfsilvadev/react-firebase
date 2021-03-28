@@ -1,5 +1,6 @@
 import { FaSistrix } from "react-icons/fa";
 import ClearDay from "../../assets/icons/clear_day.svg";
+import bgCity from "../../assets/city_at_night.jpeg";
 import { WatherResumeContent } from "./styles";
 
 export function WeatherResume() {
@@ -20,7 +21,7 @@ export function WeatherResume() {
           </p>
         </div>
       </div>
-      <div className="data-info-city">
+      <div className="data-info">
         <ul className="currently">
           <li>
             <img src={ClearDay} alt="" /> <span>Dia</span>
@@ -29,6 +30,15 @@ export function WeatherResume() {
             <img src={ClearDay} alt="" /> <span>Tempo limpo</span>
           </li>
         </ul>
+      </div>
+      <div
+        className="city"
+        style={{
+          backgroundImage: `url(${bgCity}) no-repeat center center`,
+          backgroundSize: "cover",
+        }}
+      >
+        <div className="overlay"></div>
         <h1>São Paulo, SP</h1>
       </div>
     </WatherResumeContent>
