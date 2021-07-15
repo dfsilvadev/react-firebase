@@ -5,7 +5,7 @@ export const GlobalStyle = createGlobalStyle`
     --white: #fff;
     --background: #f2f3f5;
     --gray-line: #ececec;
-    --text: #3f3f40;
+    --text: #717171;
     --text-highlight: #c5c5c5;
     --title: #2e384d;
     --red: #e83f5b;
@@ -13,6 +13,7 @@ export const GlobalStyle = createGlobalStyle`
     --blue: #5965e0;
     --yellow: #f0bc5e;
 
+    --ft-10: 0.625rem;
     --ft-14: 0.875rem;
     --ft-16: 1rem;
     --ft-18: 1.125rem;
@@ -23,10 +24,12 @@ export const GlobalStyle = createGlobalStyle`
     --ft-120: 7.5rem;
 
     --px-10: 0.625rem;
+    --px-14: 0.875rem;
     --px-16: 1rem;
     --px-20: 1.25rem;
     --px-40: 2.5rem;
     --px-60: 3.75rem;
+    --px-80: 5rem;
   }
   * {
     margin: 0;
@@ -47,7 +50,7 @@ export const GlobalStyle = createGlobalStyle`
     }
   }
   body {
-    font-family: "Barlow Condensed", sans-serif;
+    font-family: "Roboto", sans-serif;
     color: var(--text);
     background-color: var(--background);
     overflow-x: hidden;
@@ -55,7 +58,7 @@ export const GlobalStyle = createGlobalStyle`
   input, 
   textarea, 
   button {
-    font-family: "Barlow Condensed", sans-serif;
+    font-family: "Roboto Mono", sans-serif;
     font-weight: 300;
   }
   ol,
@@ -94,13 +97,8 @@ export const GlobalStyle = createGlobalStyle`
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
-    display: flex;
-    flex-direction: column;
-    > div {
-      width: 100%;
-    }
   }
-  /* @media (min-width: 576px) {
+  @media (min-width: 576px) {
     .container {
       max-width: 540px;
     }
@@ -114,14 +112,10 @@ export const GlobalStyle = createGlobalStyle`
     .container {
       max-width: 960px;
     }
-  }*/
+  }
   @media (min-width: 1200px) {
     .container {
-      padding: 0;
-      flex-direction: row;
-      > div {
-        flex: 1
-      }
+      max-width: 1160px
     }
   }
 
