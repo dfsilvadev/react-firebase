@@ -4,12 +4,12 @@ export const GlobalStyle = createGlobalStyle`
   :root {
     --white: #fff;
     --background: #f2f3f5;
-    --gray-line: #ececec;
+
+    --gray-line: #c5c5c5;
     --text: #717171;
-    --text-highlight: #c5c5c5;
     --title: #2e384d;
     --red: #e83f5b;
-    --green: #33cc95;
+    --green: #00ff5e;
     --blue: #5965e0;
     --yellow: #f0bc5e;
 
@@ -28,6 +28,7 @@ export const GlobalStyle = createGlobalStyle`
     --px-16: 1rem;
     --px-20: 1.25rem;
     --px-40: 2.5rem;
+    --px-45: 2.8125rem;
     --px-60: 3.75rem;
     --px-80: 5rem;
   }
@@ -37,7 +38,6 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
     vertical-align: baseline;
   }
@@ -51,15 +51,16 @@ export const GlobalStyle = createGlobalStyle`
   }
   body {
     font-family: "Roboto", sans-serif;
-    color: var(--text);
     background-color: var(--background);
     overflow-x: hidden;
   }
   input, 
   textarea, 
-  button {
+  button,
+  label {
     font-family: "Roboto Mono", sans-serif;
-    font-weight: 300;
+    font-weight: 400;
+    font-size: var(--ft-14)
   }
   ol,
   ul {
