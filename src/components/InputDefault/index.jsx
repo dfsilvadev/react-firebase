@@ -1,7 +1,7 @@
-import { Input } from "./styled";
+import * as S from "./styled";
 
 const InputDefault = ({ type, placeholder, ...props }) => {
-  return <Input type={type} placeholder={placeholder} {...props} />;
+  return <S.Input type={type} placeholder={placeholder} {...props} />;
 };
 
 export default InputDefault;
