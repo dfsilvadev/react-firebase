@@ -1,7 +1,14 @@
 import * as S from "./styled";
 
-const InputDefault = ({ type, placeholder, ...props }) => {
-  return <S.Input type={type} placeholder={placeholder} {...props} />;
+const InputDefault = ({ type, handleChange, placeholder, ...props }) => {
+  return (
+    <S.Input
+      type={type}
+      placeholder={placeholder}
+      {...props}
+      onChange={handleChange}
+    />
+  );
 };
 
 export default InputDefault;
