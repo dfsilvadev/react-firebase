@@ -1,16 +1,18 @@
-import { AuthContextProvider } from "./contexts/AuthContext";
-import { ChangeContextProvider } from "./contexts/ChangeContext";
-import MyRoutes from "./Routes";
+import { BrowserRouter as Router } from "react-router-dom";
+
+import { OnChangeContextProvider } from "./contexts/OnChangeContext";
+import MyRoutes from "./routes/Routes";
+
 import { GlobalStyle } from "./styles/global";
 
 const App = () => {
   return (
-    <AuthContextProvider>
-      <ChangeContextProvider>
+    <OnChangeContextProvider>
+      <Router>
         <MyRoutes />
         <GlobalStyle />
-      </ChangeContextProvider>
-    </AuthContextProvider>
+      </Router>
+    </OnChangeContextProvider>
   );
 };
 
