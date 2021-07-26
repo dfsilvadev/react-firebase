@@ -1,7 +1,8 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import useAuth from "../../hooks/useAuth";
-import useChangeState from "../../hooks/useChangeState";
+import useOnChange from "../../hooks/useOnChange";
 
 import ButtonDefault from "../ButtonDefault";
 import InputDefault from "../InputDefault";
@@ -14,15 +15,16 @@ function initialState() {
 
 const SignInForm = () => {
   const [credentials, setCredentials] = useState(initialState);
+  const navigate = useNavigate();
 
   const { signIn } = useAuth();
-  const { onChange } = useChangeState();
+  const { onChange } = useOnChange();
 
   async function handleSignIn(e) {
     e.preventDefault();
     await signIn(credentials);
-
     setCredentials(initialState);
+    navigate("/dashboard");
   }
 
   return (
