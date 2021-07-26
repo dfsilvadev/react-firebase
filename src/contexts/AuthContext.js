@@ -1,13 +1,21 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
+import storage from "../utils/storage";
 import firebase from "../services/firebase";
-import history from "../utils/history";
 
 const AuthContext = createContext({});
 
 const AuthContextProvider = ({ children }) => {
   const [authenticated, setAuthenticated] = useState(true);
   const [user, setUser] = useState(null);
+
+  function session(refreshToken) {
+    try {
+      storage.set("app.refreshToken", refreshToken);
+    } catch (err) {
+      throw new Error("Refresh token is not defined");
+    }
+  }
 
   async function signIn({ email, password }) {
     try {
@@ -26,13 +34,24 @@ const AuthContextProvider = ({ children }) => {
         refreshToken,
       });
 
-      setAuthenticated(false);
-
-      history.push("/dashboard");
+      session(refreshToken);
     } catch (err) {
       throw Error(err.message);
+    } finally {
+      setAuthenticated(false);
     }
   }
+
+  useEffect(() => {
+    firebase.auth().onAuthStateChanged((user) => {
+      if (user) {
+        const { email, refreshToken, uid } = user;
+        setUser({ email, refreshToken, uid });
+      } else {
+        setUser(null);
+      }
+    });
+  }, []);
 
   return (
     <AuthContext.Provider value={{ authenticated, user, signIn }}>
