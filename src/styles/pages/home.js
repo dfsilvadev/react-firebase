@@ -10,7 +10,7 @@ export const MainContent = styled.main`
   justify-content: center;
 `;
 
-export const Form = styled.form`
+export const FormContent = styled.div`
   width: 100%;
   max-width: 370px;
   padding: 1rem;
@@ -24,6 +24,7 @@ export const Form = styled.form`
   gap: 1rem;
 
   p {
+    text-align: center;
     color: var(--text);
     font-size: var(--ft-14);
     span {
