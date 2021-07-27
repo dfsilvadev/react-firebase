@@ -1,4 +1,5 @@
 import { BrowserRouter as Router } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
 
 import { OnChangeContextProvider } from "./contexts/OnChangeContext";
 import MyRoutes from "./routes/Routes";
@@ -7,12 +8,13 @@ import { GlobalStyle } from "./styles/global";
 
 const App = () => {
   return (
-    <OnChangeContextProvider>
-      <Router>
-        <MyRoutes />
+    <Router>
+      <OnChangeContextProvider>
         <GlobalStyle />
-      </Router>
-    </OnChangeContextProvider>
+        <MyRoutes />
+        <ToastContainer autoClose={3000} />
+      </OnChangeContextProvider>
+    </Router>
   );
 };
 
