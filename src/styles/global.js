@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import "react-toastify/dist/ReactToastify.css";
 
 export const GlobalStyle = createGlobalStyle`
   :root {
@@ -134,4 +135,13 @@ export const GlobalStyle = createGlobalStyle`
     background: #28f5be !important;
   }
 
+  .spinner-content {
+    width: 100%;
+    height: 100vh;
+    border: 1px solid #000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 `;
