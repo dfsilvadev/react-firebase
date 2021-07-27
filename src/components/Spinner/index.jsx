@@ -3,8 +3,8 @@ import * as S from "./styled";
 const Spinner = () => {
   return (
     <S.Spinner>
-      <div class="first-bounce"></div>
-      <div class="last-bounce"></div>
+      <div className="first-bounce"></div>
+      <div className="last-bounce"></div>
     </S.Spinner>
   );
 };
