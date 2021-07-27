@@ -28,7 +28,7 @@ const SignInForm = () => {
   }
 
   return (
-    <S.Form>
+    <S.Form onSubmit={handleSignIn}>
       <InputDefault
         type="email"
         name="email"
@@ -43,9 +43,7 @@ const SignInForm = () => {
         placeholder="sua senha"
         handleChange={(e) => onChange(e)(credentials, setCredentials)}
       />
-      <ButtonDefault type="submit" handleSignIn={handleSignIn}>
-        Entrar
-      </ButtonDefault>
+      <ButtonDefault type="submit">Entrar</ButtonDefault>
     </S.Form>
   );
 };
