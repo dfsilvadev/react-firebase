@@ -26,8 +26,6 @@ const AuthContextProvider = ({ children }) => {
         .signInWithEmailAndPassword(email, password)
         .then((response) => response);
 
-      console.log(response);
-
       const { uid, refreshToken } = response.user;
 
       setUser({
@@ -38,7 +36,6 @@ const AuthContextProvider = ({ children }) => {
 
       session(refreshToken);
     } catch (err) {
-      setLoading(false);
       toast.error(err.message);
     } finally {
       setTimeout(() => {
@@ -51,6 +48,32 @@ const AuthContextProvider = ({ children }) => {
     await firebase.auth().signOut();
     setUser(null);
     session();
+  }
+
+  async function signUp({ name, email, password }) {
+    const response = await firebase
+      .auth()
+      .createUserWithEmailAndPassword(email, password)
+      .then((response) => response);
+
+    const { uid } = response.user;
+
+    const consumer = { name, email, uid };
+
+    await createCustomer(consumer);
+
+    toast.success("User cadastrado com sucesso!");
+  }
+
+  async function createCustomer({ name, email, uid }) {
+    const response = await firebase
+      .firestore()
+      .collection("customers")
+      .doc(uid)
+      .set({ name, email, uid })
+      .then((response) => response);
+
+    console.log(response);
   }
 
   useEffect(() => {
@@ -68,7 +91,7 @@ const AuthContextProvider = ({ children }) => {
   }, []);
 
   return (
-    <AuthContext.Provider value={{ loading, user, signIn, signOut }}>
+    <AuthContext.Provider value={{ loading, user, signIn, signOut, signUp }}>
       {children}
     </AuthContext.Provider>
   );
